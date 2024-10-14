@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { type Offer } from '~/types/offer'
-import OfferSalary from '~/components/OfferCard/Items/OfferSalary'
-import OfferHours from '~/components/OfferCard/Items/OfferHours.vue'
-import OfferExperience from './Items/OfferExperience.vue'
-import OfferLocation from './Items/OfferLocation.vue'
+import OfferSalary from '~/components/OfferAttributes/OfferSalary.vue'
+import OfferHours from '~/components/OfferAttributes/OfferHours.vue'
+import OfferExperience from '~/components/OfferAttributes/OfferExperience.vue'
+import OfferLocation from '~/components/OfferAttributes/OfferLocation.vue'
 
 const { experienceLevels } = useExperienceLevels()
 

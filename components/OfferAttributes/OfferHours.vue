@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import OfferItem from '../OfferItem.vue'
+import OfferItem from './AttributeWrapper.vue'
 
 interface Props {
   min: number,
