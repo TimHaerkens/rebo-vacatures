@@ -5829,20 +5829,6 @@ nuxi@^3.13.2:
   resolved "https://registry.yarnpkg.com/nuxi/-/nuxi-3.14.0.tgz#697a1e8b4f0d92fb8b30aa355af9295fa8c2cb4e"
   integrity sha512-MhG4QR6D95jQxhnwKfdKXulZ8Yqy1nbpwbotbxY5IcabOzpEeTB8hYn2BFkmYdMUB0no81qpv2ldZmVCT9UsnQ==
 
-nuxt-api-party@^2.0.10:
-  version "2.0.10"
-  resolved "https://registry.yarnpkg.com/nuxt-api-party/-/nuxt-api-party-2.0.10.tgz#f129e9b5c424249b1e9887a7a798b4b1729e0a75"
-  integrity sha512-OaQzoO1i4u9XsZLT9kEGN5+oM2LnMDrSDuZBD923XMeBWzuhyGvPr7k8myKy1Gbq1TKmldoOD9oNYlPsvKiHHQ==
-  dependencies:
-    "@nuxt/kit" "^3.13.2"
-    defu "^6.1.4"
-    ofetch "^1.4.0"
-    ohash "^1.1.4"
-    openapi-typescript-helpers "0.0.13"
-    pathe "^1.1.2"
-    scule "^1.3.0"
-    ufo "^1.5.4"
-
 nuxt@^3.13.0:
   version "3.13.2"
   resolved "https://registry.yarnpkg.com/nuxt/-/nuxt-3.13.2.tgz#af43a1fb5ccaaf98be0aaeca1bee504eeee24135"
@@ -5935,7 +5921,7 @@ object-hash@^3.0.0:
   resolved "https://registry.yarnpkg.com/object-hash/-/object-hash-3.0.0.tgz#73f97f753e7baffc0e2cc9d6e079079744ac82e9"
   integrity sha512-RSn9F68PjH9HqtltsSnqYC1XXoWe9Bju5+213R98cNGttag9q9yAOTzdbsqvIa7aNm5WffBZFpWYr2aWrklWAw==
 
-ofetch@^1.3.4, ofetch@^1.4.0:
+ofetch@^1.3.4:
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/ofetch/-/ofetch-1.4.1.tgz#b6bf6b0d75ba616cef6519dd8b6385a8bae480ec"
   integrity sha512-QZj2DfGplQAr2oj9KzceK9Hwz6Whxazmn85yYeVuS3u9XTMOGMRx0kO95MQ+vLsj/S/NwBDMMLU5hpxvI6Tklw==
@@ -6001,11 +5987,6 @@ open@^8.4.0:
     define-lazy-prop "^2.0.0"
     is-docker "^2.1.1"
     is-wsl "^2.2.0"
-
-openapi-typescript-helpers@0.0.13:
-  version "0.0.13"
-  resolved "https://registry.yarnpkg.com/openapi-typescript-helpers/-/openapi-typescript-helpers-0.0.13.tgz#d959b6a87b5461759e240af375fab480252d2caf"
-  integrity sha512-z44WK2e7ygW3aUtAtiurfEACohf/Qt9g6BsejmIYgEoY4REHeRzgFJmO3ium0libsuzPc145I+8lE9aiiZrQvQ==
 
 openapi-typescript@^6.7.6:
   version "6.7.6"
