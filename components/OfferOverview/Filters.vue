@@ -31,7 +31,7 @@ onMounted(() => {
       icon="i-heroicons-magnifying-glass-20-solid"
     />
 
-    <div class="flex flex-col md:flex-row md:justify-between gap-4">
+    <div class="flex flex-col md:flex-row md:justify-between gap-4 lg:max-w-[60rem] lg:m-auto">
       <USelectMenu 
         v-model="offersStore.filters.levels" 
         :options="possibleLevels" 
