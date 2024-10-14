@@ -12,7 +12,7 @@ const possibleDepartments = computed(() => offersStore.possibleDepartments)
 const { initializeFiltersFromURL, updateURLWithFilters } = useFilterSync()
 
 onMounted(() => {
-  if (route.query.params){
+  if (Object.keys(route.query).length > 0) {
     initializeFiltersFromURL()
   } else {
     updateURLWithFilters()
