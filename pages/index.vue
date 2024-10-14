@@ -31,6 +31,7 @@ const offersStore = useOffersStore()
           Er zijn geen vacatures gevonden
         </div>
         <OfferCard
+          class="offer-card"
           v-for="offer in offersStore.filteredOffers"
           :key="offer.id"
           :offer="offer"
