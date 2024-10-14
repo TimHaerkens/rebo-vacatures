@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import OfferItem from '../OfferItem.vue'
+import OfferItem from './AttributeWrapper.vue'
 
 interface Props {
-  salary: { currency: string, min: number, max: number , period: string }
+  salary: { currency: string, min: number | null, max: number | null }
 }
 const props = defineProps<Props>()
 
@@ -15,7 +15,7 @@ const currencySymbols = {
 const currencySymbol = currencySymbols[props.salary.currency] || props.salary.currency
 
 //format number with thousand separator (.)
-const formatNumber = (value: number) => {
+const formatNumber = (value: number | null) => {
   if (!value) return '0'
   return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.')
 }

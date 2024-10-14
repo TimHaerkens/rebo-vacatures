@@ -14,12 +14,6 @@ export interface Offer {
   hybrid: boolean
 }
 
-export enum ExperienceCode {
-  ENTRY_LEVEL = 'junior',
-  MID_LEVEL = 'mid',
-  SENIOR = 'senior',
-}
-
 export interface ApiResponse {
   offers: Offer[]
 }

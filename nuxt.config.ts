@@ -3,6 +3,7 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     '@nuxt/eslint',
     '@nuxt/ui',
+    '@pinia/nuxt',
   ],
 
   devtools: {
