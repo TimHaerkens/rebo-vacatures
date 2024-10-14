@@ -1,25 +1,32 @@
 // @vitest-environment nuxt
 import { mountSuspended } from '@nuxt/test-utils/runtime'
-import { describe, expect, it } from 'vitest'
+import { describe, expect, it, beforeEach } from 'vitest'
 import OfferCard from '~/components/OfferOverview/OfferCard.vue'
 
 describe('OfferCard.vue', () => {
+  
+  let offer
+
+  beforeEach(() => {
+    offer = {
+      id: 1,
+      title: 'Senior Developer',
+      experience_code: 'senior',
+      location: 'Amsterdam',
+      min_hours: 32,
+      max_hours: 40,
+      salary: {
+        min: 50000,
+        max: 70000,
+        currency: 'EUR',
+      },
+    }
+  })
+  
   it('renders the offer card with correct values', async () => {
     const wrapper = await mountSuspended(OfferCard, {
       props: {
-        offer: {
-          id: 1,
-          title: 'Senior Developer',
-          experience_code: 'senior',
-          location: 'Amsterdam',
-          min_hours: 32,
-          max_hours: 40,
-          salary: {
-            min: 50000,
-            max: 70000,
-            currency: 'EUR',
-          },
-        }
+        offer
       },
     })
 
@@ -34,6 +41,19 @@ describe('OfferCard.vue', () => {
     expect(offerLocation.exists()).toBe(true)
     expect(offerLocation.props('location')).toBe('Amsterdam')
     
+  })
+
+  it('does not render OfferSalary component if salary.min is undefined', async () => {
+    offer.salary = {}
+
+    const wrapper = await mountSuspended(OfferCard, {
+      props: {
+        offer,
+      },
+    })
+
+    const offerSalary = wrapper.findComponent({ name: 'OfferSalary' })
+    expect(offerSalary.exists()).toBe(false)
   })
 
   
