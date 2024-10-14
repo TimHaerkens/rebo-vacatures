@@ -4,6 +4,7 @@ export default defineNuxtConfig({
     '@nuxt/eslint',
     '@nuxt/ui',
     '@pinia/nuxt',
+    'pinia-plugin-persistedstate/nuxt',
   ],
 
   devtools: {
