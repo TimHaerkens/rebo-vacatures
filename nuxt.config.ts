@@ -3,7 +3,6 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     '@nuxt/eslint',
     '@nuxt/ui',
-    'nuxt-api-party',
   ],
 
   devtools: {
@@ -28,16 +27,6 @@ export default defineNuxtConfig({
       autoInit: false,
     },
   },
-
-  apiParty: {
-    endpoints: {
-      rebo: {
-        url: 'https://rebogroep.recruitee.com/api/',
-      },
-    },
-  },
-
-  
 
   compatibilityDate: '2024-10-14',
 })

@@ -1,3 +1,18 @@
+<script setup lang="ts">
+
+const {
+  loading,
+  offers,
+  fetchOffers,
+} = useOffers()
+
+onMounted(() => {
+  fetchOffers()
+})
+
+
+</script>
+
 <template>
   <div class="py-8">
     <UContainer>
@@ -6,6 +21,10 @@
           Voeg waarde toe aan jouw carrière
         </h1>
       </header>
+    </UContainer>
+
+    <UContainer v-if="!loading">
+      {{ offers }}
     </UContainer>
   </div>
 </template>
