@@ -8,6 +8,7 @@ const {
 
 onMounted(() => {
   fetchOffers()
+  console.log('Offers', offers)
 })
 
 
@@ -24,7 +25,20 @@ onMounted(() => {
     </UContainer>
 
     <UContainer v-if="!loading">
-      {{ offers }}
+
+      <h3 class="font-bold mb-4 text-brand">
+        We hebben momenteel 
+        <span class="text-white rounded-full inline-flex bg-brand_light w-8 h-8 justify-center items-center align-middle">{{ offers.length }}</span> 
+        vacatures
+      </h3>
+
+      <div class="m-auto grid grid-cols-1 md:grid-cols-2 gap-6">
+        <OfferCard
+          v-for="offer in offers"
+          :key="offer.id"
+          :offer="offer"
+        />
+      </div>
     </UContainer>
   </div>
 </template>
