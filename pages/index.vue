@@ -8,7 +8,6 @@ const {
 
 onMounted(() => {
   fetchOffers()
-  console.log('Offers', offers)
 })
 
 
