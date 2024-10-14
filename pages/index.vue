@@ -1,14 +1,23 @@
 <script setup lang="ts">
-import { useOffersStore } from '~/stores/offers'
+import { useOffersStore } from '~/stores/offersStore'
 import OfferCard from '~/components/OfferOverview/OfferCard.vue'
 
 const offersStore = useOffersStore()
+const route = useRoute()
 
 const possibleLocations = computed(() => offersStore.possibleLocations)
 const possibleLevels = computed(() => offersStore.possibleLevels)
 const possibleDepartments = computed(() => offersStore.possibleDepartments)
 
-useFilterSync()
+const { initializeFiltersFromURL, updateURLWithFilters } = useFilterSync()
+
+onMounted(() => {
+  if (route.query.params){
+    initializeFiltersFromURL()
+  } else {
+    updateURLWithFilters()
+  }
+})
 
 </script>
 

@@ -1,21 +1,11 @@
 <script setup lang="ts">
 import { appName } from './constants'
-import { useOffersStore } from '~/stores/offers'
 
 useHead({
   title: appName,
   bodyAttrs: {
     class: 'bg-[#e5f1f3] text-stone-800 dark:bg-stone-900 dark:text-stone-50',
   },
-  
-})
-
-const offersStore = useOffersStore()
-
-onBeforeMount(() => {
-  if (!offersStore.offers.length) {
-    offersStore.fetchOffers()
-  }
 })
 </script>
 

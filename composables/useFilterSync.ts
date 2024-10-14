@@ -1,6 +1,6 @@
 import { watch, onMounted } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
-import { useOffersStore } from '~/stores/offers'
+import { useOffersStore } from '~/stores/offersStore'
 
 export function useFilterSync() {
   const offersStore = useOffersStore()
@@ -55,18 +55,14 @@ export function useFilterSync() {
   watch(
     () => offersStore.filters,
     () => {
-        console.log('test')
       offersStore.applyFilters()
       updateURLWithFilters()
     },
     { deep: true }
   )
 
-  onMounted(() => {
-    initializeFiltersFromURL()
-  })
-
   return {
     initializeFiltersFromURL,
+    updateURLWithFilters
   }
 }

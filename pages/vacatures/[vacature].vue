@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useRoute } from 'vue-router'
-import { useOffersStore } from '~/stores/offers'
+import { useOffersStore } from '~/stores/offersStore'
 import OfferDetails from '~/components/OfferPage/OfferDetails.vue';
 
 const route = useRoute()
@@ -21,11 +21,15 @@ function removeTags(str: string) {
 
 <template>
   <div class=" bg-white">
-      <header class="mb-8 pt-32 pb-8 px-6 rounded-b-3xl bg-brand_light">
-        <h1 class=" text-2xl font-bold text-white w-80">
-          {{ offer?.title }}
-        </h1>
-      </header>
+    <header class="mb-8 pt-28 pb-8 px-6 rounded-b-3xl bg-brand_light">
+      <NuxtLink to="/" class="text-white">
+        <Icon name="proicons:arrow-left" class="text-white text-xl align-middle" />
+        <span class="text-white">Terug naar overzicht</span>
+      </NuxtLink>
+      <h1 class=" text-2xl font-bold text-white w-80">
+        {{ offer?.title }}
+      </h1>
+    </header>
 
     <UContainer>
         <div class="grid md:grid-cols-2  gap-6">

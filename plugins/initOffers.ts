@@ -1,4 +1,4 @@
-import { useOffersStore } from '~/stores/offers'
+import { useOffersStore } from '~/stores/offersStore'
 
 export default defineNuxtPlugin(async (nuxtApp) => {
   const offersStore = useOffersStore()
