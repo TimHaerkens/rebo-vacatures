@@ -16,6 +16,7 @@ onMounted(() => {
     initializeFiltersFromURL()
   } else {
     updateURLWithFilters()
+    offersStore.fetchOffers()
   }
 })
 
@@ -25,7 +26,7 @@ onMounted(() => {
     <UInput 
       v-model="offersStore.filters.searchQuery" 
       size="lg" 
-      class="w-60 m-auto" 
+      class="w-full md:w-60 m-auto" 
       placeholder="Zoek op functietitel" 
       icon="i-heroicons-magnifying-glass-20-solid"
     />

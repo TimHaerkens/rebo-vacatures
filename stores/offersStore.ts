@@ -9,7 +9,7 @@ export const useOffersStore = defineStore('offers', {
     loading: false,
     error: null as Error | null,
     filters: {
-        searchQuery: 'aa' as string,
+        searchQuery: '' as string,
         locations: [] as string[],
         levels: [] as string[],
         minSalary: 0 as number,
@@ -24,6 +24,7 @@ export const useOffersStore = defineStore('offers', {
       try {
         const response = await $fetch<{ offers: Offer[] }>('/api/offers')
         this.offers = response.offers
+        this.applyFilters()
       } catch (err) {
         this.error = err as Error
       } finally {
@@ -31,7 +32,7 @@ export const useOffersStore = defineStore('offers', {
       }
     },
     applyFilters() {
-        let offers = [...this.offers]
+        let offers = this.offers
   
         if (this.filters.searchQuery) {
           const query = this.filters.searchQuery.toLowerCase()
