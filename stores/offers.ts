@@ -2,7 +2,6 @@ import { defineStore } from 'pinia'
 import type { Offer } from '~/types/offer'
 const { experienceLevels } = useExperienceLevels()
 
-
 export const useOffersStore = defineStore('offers', {
   state: () => ({
     offers: [] as Offer[],

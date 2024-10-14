@@ -8,13 +8,7 @@ const possibleLocations = computed(() => offersStore.possibleLocations)
 const possibleLevels = computed(() => offersStore.possibleLevels)
 const possibleDepartments = computed(() => offersStore.possibleDepartments)
 
-watch(
-  () => offersStore.filters,
-  () => {
-    offersStore.applyFilters()
-  },
-  { deep: true }
-)
+useFilterSync()
 
 </script>
 
