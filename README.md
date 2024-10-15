@@ -4,16 +4,6 @@
 
 This is a job vacancy listing application built with Nuxt 3, Vue 3, TypeScript, and Pinia. The application allows users to browse and filter job vacancies based on various criteria such as hours, salary, location, department, and job title.
 
-### Features
-
-- **Universe Selection:** Users can select a universe (e.g., Rick and Morty, Pokemon) from the homepage.
-- **Character Overviews:** Once a universe is selected, users can view a list of characters within that universe.
-- **Character Details:** Clicking on a character opens a detailed view, displaying information such as images, properties, and extra details about the character.
-- **Pagination:** The character lists support pagination to browse through multiple characters.
-- **Grid/List** View Toggle: The application allows switching between grid and list views on the overview pages for better user experience.
-
-
-
 ## Getting started
 
 ### Prerequisites
